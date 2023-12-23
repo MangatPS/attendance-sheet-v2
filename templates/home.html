@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Attendance Sheet</title>  
+    <title>Attendance Sheet</title> 
+    <style>
+      h1{
+          font-size: 35px;
+        font: family: Roboto;
+        font-weight: normal;
+        color: rgb(100,100, 100);
+        text-align: center;
+      }
+    #banner {
+      width: 100%;
+      height: 250px;
+      /*object-fit: cover;*/
+    }    
+
+    h2 {
+      font-size: 32px;
+      font-family: Roboto;
+      color: rgb(100, 100, 100);
+      text-align: center;
+      font-weight: normal;
+    }
+
+    .bodytable  {
+      font-family: Roboto;
+      font-size:40px;
+      color: rgb(200, 100, 100);
+     }
+  
+    #container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    </style>
   </head>
-  <body>
-    <img src="/static/logo_new.png" height="320">
+<body>
+  <div id="container">
+    <img id="banner" src="/static/logo_new.png" width="1200">
     <h1>Attendance Sheet</h1>  
     <h2> Absentee Statement for the month of December, 2023 (DPLs on Contract)</h2>
+  <p class="bodytable">
+    Please fill the details in the following table: 
     <table>
       <th>Sr. No.</th>
       <th>Scheme</th>
@@ -19,6 +55,12 @@
       
       
     </table>
+  </p>
+    <div style="text-align:center;">
+    <button> Submit </button>
+      <p>Copyright 2023, University Library</p>
+    </div>
+    </div>
   </body>
   
 </html>
