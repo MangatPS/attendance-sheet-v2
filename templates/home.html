@@ -9,15 +9,18 @@
       #banner {
         height: 250px;
         width: 100%;
+        margin-bottom:16px
         /*object-fit: cover;*/
       }
       
     </style>
   </head>
-<body>
+  <body>
+
+    {% include 'nav.html' %}
+     <img class="img-fluid" id="banner"  src="/static/logo_new.png" width="1200">
   <div class="container">
-    <img class="img-fluid" id="banner"  src="/static/logo_new.png" width="1200">
-    <h1 class="text-center" mt-2 mb-4>Attendance Sheet of {{Dept_name}}</h1>  
+  <h1 class="text-center" mt-2 mb-4>Attendance Sheet of {{Dept_name}}</h1>  
     <h2 class="text-center" mt-2 mb-4> Absentee Statement for the month of December, 2023 (DPLs on Contract)</h2>
   <p>
     Please fill the details in the following table: 
@@ -66,9 +69,10 @@
   </p>
     <div class="text-center">
     <button class="btn btn-primary btn-lg"> Submit </button>
-      <p class="mt-4">Copyright 2023, University Library</p>
+     </div>
     </div>
-    </div>
+    {% include 'footer.html' %}
+  </body>
   </body>
   
 </html>
