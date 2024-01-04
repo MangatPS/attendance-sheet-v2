@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, text
 
 # connnect to database
 
-db_connection_string = "mysql+pymysql://1zxubg2o3g0ma07ksdjv:pscale_pw_Yq3hKU58k1eWkFnJReyryMOhTjHgJQ5qvFWw9FNKUrh@aws.connect.psdb.cloud/attendance?charset=utf8mb4"
+db_connection_string = "mysql+pymysql://svgnsd00kxpijs5hgw3j:pscale_pw_UUL9rMKaKM7Y6ALnyX8X41RXmyQ05nkJqB04VixbR1D@aws.connect.psdb.cloud/attendance?charset=utf8mb4"
 
 engine = create_engine(
   db_connection_string,
@@ -13,11 +13,11 @@ engine = create_engine(
   }
 )
 
-
-def load_emp_from_db():
-  with engine.connect() as conn:
+with engine.connect() as conn:
   result = conn.execute(text("select * from employee"))
-  EMPLOYEE = []
-  for row in result.all():
-    EMPLOYEE.append(dict(row))
-  return EMPLOYEE
+  #print(result.all())
+
+  result_dicts = []
+for row in result.all():
+  result_dicts.append(row._asdict())
+print(result_dicts)

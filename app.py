@@ -1,5 +1,5 @@
 from flask import Flask, render_template,jsonify
-from database import load_emp_from_db
+
 
 app = Flask(__name__)
 
@@ -8,7 +8,7 @@ def hello_world():
   EMPPLOYEE = load_emp_from_db()
     return render_template('home.html', 
                       employee=EMPPLOYEE,
-                    dept_name='Library',)
+                    dept_name='Library')
 
 @app.route("/api/employee")
 def list_employee():
